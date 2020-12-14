@@ -12,7 +12,7 @@ payment methods, it be can be represented using the following enum class:
 Enum can hold values that are always item-specific:
 
 ## SAMPLE CODE
-kotlin```
+```kotlin
 import java.math.BigDecimal
 
 enum class PaymentOption {
@@ -34,7 +34,7 @@ fun main() {
     val t = PaymentOption.TRANSFER
     print(t.commission) // 0, because `commission` is per-item
 }
-kotlin```
+```
 
 ## SEALED CLASS
 Another way to represent a concrete group of values is a sealed class. Sealed classes are abstract classes with a concrete number of subclasses all 
@@ -45,7 +45,7 @@ subclasses of a sealed class just by analyzing a single file. Kotlin compiler kn
 and understand that all the possibilities were covered.
 
 ## SAMPLE CODE
-kotlin```
+```kotlin
 sealed class Response<out R>
 class Success<R>(val value: R): Response<R>()
 class Failure(val error: Throwable): Response<Nothing>()
@@ -57,7 +57,7 @@ fun handle(response: Response<String>) {
     }
     print(text)
 }
-kotlin```
+```
 
 ## Summary
 *Enum classes represent a concrete set of values, while sealed classes represent a concrete set of classes. Since those classes can be object declarations, 
