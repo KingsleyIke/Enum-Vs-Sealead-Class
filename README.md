@@ -93,3 +93,13 @@ On the other hand, Object oriented programming can be defined as a programming m
 | In procedural programming, function is more important than data.| In object oriented programming, data is more important than function.
 | Procedural programming is based on unreal world.| Object oriented programming is based on real world.
 | Examples: C, FORTRAN, Pascal, Basic etc.| Examples: C++, Java, Python, C# etc.
+
+## Lazy Keyword
+The concept of lazy properties, or lazy initialization was designed to defer initialization of objects to the point when they are actually necessary. The initialization sequence runs when the object is accessed in the code, not at its declaration. Which also means that if it is never used, it is never initialized. And this translates to not running unnecessary code, a smaller memory footprint, and hence, faster execution.
+
+## val and var Keyword
+var is like a general variable and can be assigned multiple times and is known as the mutable variable in Kotlin. Whereas val is a constant variable and can not be assigned multiple times and can be Initialized only single time and is known as the immutable variable
+
+
+## Lateinit
+To defer the initialization of variables, we can specify that a field is lateinit. We are informing the compiler that this variable will be assigned later and we are freeing the compiler from the responsibility of making sure that this variable gets initialized:
