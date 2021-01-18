@@ -1,0 +1,10 @@
+#Difference Between Add fragment and Replace Fragment
+
+Replace removes the existing fragment and adds a new fragment. 
+This means when you press back button the fragment that got replaced will be created with its onCreateView being invoked. 
+Whereas add retains the existing fragments and adds a new fragment that means existing fragment will be active and they wont be in 'paused' state hence when a back button is pressed onCreateView is not called for the existing fragment(the fragment which was there before new fragment was added).
+
+#Diffrence Between Popbackstack and removebackstack
+
+PopBackStack() will remove current fragment and replace it with the last one from the stack.
+While remove() will simplyremove the fragment.
